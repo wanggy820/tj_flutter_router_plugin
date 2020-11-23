@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.xcw.hybrid_manager">
+    package="com.tojoy.hybrid_manager">
     <application
         tools:replace="android:allowBackup"
         android:allowBackup="true">
         <activity
-            android:name=".WCXFlutterActivity"
+            android:name=".TJFlutterActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"

@@ -1,6 +1,6 @@
-package com.xcw.hybrid_manager;
+package com.tojoy.hybrid_manager;
 
-public interface WCXFlutterResponse {
+public interface TJHTTPResponse {
     public void onSuccess(String response);
     public void onError(String error);
 }

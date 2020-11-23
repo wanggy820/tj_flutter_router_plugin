@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - HBDNavigationBar (1.7.7)
+  - hybrid_manager (0.0.1):
+    - Flutter
+    - HBDNavigationBar
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - hybrid_manager (from `.symlinks/plugins/hybrid_manager/ios`)
+
+SPEC REPOS:
+  trunk:
+    - HBDNavigationBar
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  hybrid_manager:
+    :path: ".symlinks/plugins/hybrid_manager/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  HBDNavigationBar: 6ba38b99637039c831ce460364d5398f29fa0685
+  hybrid_manager: d569aa5268cee79b48eb1e6a36a1e836ca1dc600
+
+PODFILE CHECKSUM: adec3c3a1723b478aab009b523f6164df8e05343
+
+COCOAPODS: 1.9.1

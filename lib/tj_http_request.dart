@@ -1,6 +1,6 @@
 import 'hybrid_manager.dart';
 
-class WCXHTTPResquest {
+class TJHTTPResquest {
 
   static void sendRequestWithURL(String url, Map params,
       TJHttpResponse response) {

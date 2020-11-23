@@ -1,91 +1,78 @@
 #import "HybridManagerPlugin.h"
 #import "UIViewController+Router.h"
 #import <objc/message.h>
-#import "WCXFlutterViewController.h"
+#import <HBDNavigationBar/UIViewController+HBD.h>
+#import "HybridManager.h"
+#import "TJRouter.h"
 
-void openURLWithParams(NSString *url, NSDictionary *params, BOOL isOpenFlutter){
-    BOOL animated = params[@"animated"] ? [params[@"animated"] boolValue] : YES;
-    if (isOpenFlutter) {
-        [HybridManagerPlugin openFlutterWithURL:url params:params animated:animated];
-        return;
-    }
-    if ([[HybridManagerPlugin sharedInstance].delegate respondsToSelector:@selector(flutterOpenNativeWithURL:params:)]) {
-        [[HybridManagerPlugin sharedInstance].delegate flutterOpenNativeWithURL:url params:params];
-    }
-}
+@interface HybridManagerPlugin ()
+
+@property (nonatomic,strong) FlutterMethodChannel* methodChannel;
+
+@end
+
 @implementation HybridManagerPlugin
 
-+ (instancetype)sharedInstance{
-    static HybridManagerPlugin * sharedInst;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInst = [[HybridManagerPlugin alloc] init];
-    });
-    return sharedInst;
-}
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-    HybridManagerPlugin* instance = [HybridManagerPlugin sharedInstance];
+    HybridManagerPlugin* instance = [HybridManagerPlugin new];
     instance.methodChannel = [FlutterMethodChannel methodChannelWithName:@"hybrid_manager" binaryMessenger:[registrar messenger]];
     [registrar addMethodCallDelegate:instance channel:instance.methodChannel];
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-    if ([@"openNativeWithURL" isEqualToString:call.method]) {//flutter 打开原生
-        NSDictionary *arguments = call.arguments;
-        openURLWithParams(arguments[@"url"], arguments[@"params"], NO);
-    } else if([@"openFlutterWithURL" isEqualToString:call.method]){//flutter 打开flutter
-        NSDictionary *arguments = call.arguments;
-        openURLWithParams(arguments[@"url"], arguments[@"params"], YES);
+    if ([@"openURL" isEqualToString:call.method]) {//flutter 打开原生
+        NSString *url = call.arguments[@"url"];
+        [TJRouter openURL:url completion:^(id  _Nonnull result) {
+            //flutter本身不需要回调
+            if ([HybridManager sharedInstance].completeCache[url]) {
+                return;
+            }
+            NSMutableDictionary *arguments = [NSMutableDictionary dictionary];
+            arguments[@"url"] = url;
+            arguments[@"result"] = result;
+            [self invokeMethod:@"completion" arguments:arguments];
+        }];
     } else if([@"pop" isEqualToString:call.method]){
         UINavigationController *nav = [UIViewController currentNavigationController];
-        BOOL animated = call.arguments ? [call.arguments boolValue] : YES;
-        [nav popViewControllerAnimated:animated];
-    } else if([@"getMainEntryParams" isEqualToString:call.method]){//打开flutter入参
-        result([HybridManagerPlugin sharedInstance].mainEntryParams);
+        [nav popViewControllerAnimated:YES];
     } else if ([@"sendRequestWithURL" isEqualToString:call.method]) {//请求网络
         NSDictionary *arguments = call.arguments;
         [self sendRequestWithURL:arguments[@"url"] params:arguments[@"params"]];
+    } else if ([@"completion" isEqualToString:call.method]) {
+        NSString *url = call.arguments[@"url"];
+        id result = call.arguments[@"result"];
+        if (url && [HybridManager sharedInstance].completeCache[url]) {
+            [HybridManager sharedInstance].completeCache[url](result);
+        }
     }
     else {
         result(FlutterMethodNotImplemented);
     }
 }
 
-+ (void)openFlutterWithURL:(NSString *)url params:(NSDictionary *)params {
-    [self openFlutterWithURL:url params:params animated:YES];
-}
-
-+ (void)openFlutterWithURL:(NSString *)url params:(NSDictionary *)params animated:(BOOL)animated {
-    UINavigationController *nav = [UIViewController currentNavigationController];
-    WCXFlutterViewController *flutterVC = [[WCXFlutterViewController alloc] init];
-    
-    [flutterVC setInitialRoute:url];
-    [HybridManagerPlugin sharedInstance].mainEntryParams = params;
-    [nav pushViewController:flutterVC animated:animated];
-    
-    //注册
-    ((void (*)(id, SEL, id))objc_msgSend)(NSClassFromString(@"GeneratedPluginRegistrant"), NSSelectorFromString(@"registerWithRegistry:"), flutterVC);
+//调用flutter,把请求结果返回给flutter
+- (void)invokeMethod:(NSString*)method arguments:(id)arguments {
+    [self.methodChannel invokeMethod:method arguments:arguments result:^(id  _Nullable result) {
+        NSLog(@"*********result:%@", result);
+    }];
 }
 
 - (void)sendRequestWithURL:(NSString *)url params:(NSDictionary *)params {
-    if (![self.delegate respondsToSelector:@selector(sendRequestWithURL:params:complete:)]) {
+    if (![[HybridManager sharedInstance].delegate respondsToSelector:@selector(sendRequestWithURL:params:completion:)]) {
         return;
     }
-    void (^complete)(NSString *,NSError *) = ^(NSString *response,NSError *error) {
+    void (^completion)(NSString *, BOOL, NSString *) = ^(NSString *response, BOOL success, NSString *error) {
         //回调给flutter
         NSMutableDictionary *arguments = [NSMutableDictionary dictionary];
-        arguments[@"url"] = url?:@"";
-        if (error) {
-            arguments[@"error"] = error.domain?:@"网络请求失败";
-        }
+        arguments[@"url"] = url;
+        arguments[@"success"] = @(success);
+        arguments[@"error"] = error;
         arguments[@"response"] = response;
-        //调用flutter,把请求结果返回给flutter
-        [self.methodChannel invokeMethod:@"sendRequestWithURL" arguments:arguments result:^(id  _Nullable result) {
-//            NSLog(@"*********result:%@", result);
-        }];
+
+        [self invokeMethod:@"sendRequestWithURL" arguments:arguments];
     };
-    [self.delegate sendRequestWithURL:url params:params complete:complete];
+    [[HybridManager sharedInstance].delegate sendRequestWithURL:url params:params completion:completion];
 }
 
 @end

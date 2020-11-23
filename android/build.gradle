@@ -1,4 +1,4 @@
-group 'com.xcw.hybrid_manager'
+group 'com.tojoy.hybrid_manager'
 version '1.0-SNAPSHOT'
 buildscript {
     repositories {

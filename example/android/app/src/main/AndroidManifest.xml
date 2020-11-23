@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xcw.hybrid_manager_example">
+    package="com.tojoy.hybrid_manager_example">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -28,6 +28,17 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity android:name=".Activity1"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme">
+
+        </activity>
+        <activity android:name=".Activity2"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme">
+
         </activity>
     </application>
 </manifest>

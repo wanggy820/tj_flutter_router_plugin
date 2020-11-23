@@ -1,56 +1,23 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
+import 'dart:ui' as ui;
+import 'package:hybrid_manager_example/VC2.dart';
+import 'package:hybrid_manager_example/VC1.dart';
 
-import 'package:flutter/services.dart';
-import 'package:hybrid_manager/hybrid_manager.dart';
+void main() {
+  String router = ui.window.defaultRouteName;
+  Uri uri = Uri.parse(router);
+  print("原生数据---：" + uri.path + ",query:" + uri.queryParameters.toString());//根据url.path 跳转不同页面
+  switch (uri.queryParameters["page"]) {
+    case "vc1":
+      runApp(VC1(uri.queryParameters["title"]));
+      break;
 
-void main() => runApp(MyApp());
+    default :
+      runApp(VC2(uri.queryParameters["title"]));
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
+      break;
+  }
+
 }
 
-class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
 
-  @override
-  void initState() {
-    super.initState();
-    initPlatformState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-//      platformVersion = await HybridManager.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
-      ),
-    );
-  }
-}
