@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-import 'package:hybrid_manager_example/VC2.dart';
-import 'package:hybrid_manager_example/VC1.dart';
+
+import 'VC1.dart';
+import 'VC2.dart';
+
 
 void main() {
   String router = ui.window.defaultRouteName;

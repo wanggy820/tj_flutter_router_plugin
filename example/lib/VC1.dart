@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hybrid_manager/hybrid_stack_manager_plugin.dart';
+import "package:tj_flutter_router_plugin/tj_router_manager.dart";
 
 class VC1 extends StatelessWidget {
   // This widget is the root of your application.

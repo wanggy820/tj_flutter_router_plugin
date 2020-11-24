@@ -1,37 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="685eb976-e910-4257-87b9-b742226777ee" name="Default Changelist" comment="" />
+    <list default="true" id="0aabb20b-2e50-43e2-bc7b-81ceec5da5bc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Nexus_5X_API_29]" />
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Dart File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectId" id="1kUWVpQ9znKuXiEqFzOEJZoDY9V" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1kiRWhjfrUWwFC0vcDGS0z8I8fh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -39,80 +25,34 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="685eb976-e910-4257-87b9-b742226777ee" name="Default Changelist" comment="" />
-      <created>1554879638664</created>
+      <changelist id="0aabb20b-2e50-43e2-bc7b-81ceec5da5bc" name="Default Changelist" comment="" />
+      <created>1606181458737</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1554879638664</updated>
+      <updated>1606181458737</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605767782795">
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom" timestamp="1606184446072">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1605767782795" />
-    <state width="475" height="466" key="DebuggerActiveHint" timestamp="1605851053501">
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606184446072" />
+    <state width="1398" height="238" key="GridCell.Tab.0.center" timestamp="1606184446071">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="475" height="466" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1605851053501" />
-    <state width="1398" height="278" key="GridCell.Tab.0.bottom" timestamp="1606102120805">
+    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606184446071" />
+    <state width="1398" height="238" key="GridCell.Tab.0.left" timestamp="1606184446071">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="278" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606102120805" />
-    <state width="1398" height="141" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1605756739296" />
-    <state width="1398" height="278" key="GridCell.Tab.0.center" timestamp="1606102120804">
+    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606184446071" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right" timestamp="1606184446072">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="278" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606102120804" />
-    <state width="1398" height="141" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1605756739296" />
-    <state width="1398" height="278" key="GridCell.Tab.0.left" timestamp="1606102120804">
+    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606184446072" />
+    <state width="300" height="98" key="javadoc.popup.new" timestamp="1606182820737">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="278" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606102120804" />
-    <state width="1398" height="141" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1605756739295" />
-    <state width="1398" height="278" key="GridCell.Tab.0.right" timestamp="1606102120805">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="278" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606102120805" />
-    <state width="1398" height="141" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1605756739296" />
-    <state x="208" y="31" key="SettingsEditor" timestamp="1605857969309">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605857969309" />
-    <state x="412" y="205" width="624" height="490" key="find.popup" timestamp="1606097332091">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="412" y="205" width="624" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606097332091" />
-    <state width="300" height="101" key="javadoc.popup.new" timestamp="1606098249379">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="300" height="101" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1606098249379" />
-    <state width="300" height="98" key="javadoc.popup.new/0.23.1440.877@0.23.1440.877" timestamp="1605756851231" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605834078964">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605834078964" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/hybrid_manager.dart</url>
-          <line>44</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/hybrid_manager.dart</url>
-          <line>14</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/hybrid_manager.dart</url>
-          <line>52</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="300" height="98" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1606182820737" />
   </component>
 </project>

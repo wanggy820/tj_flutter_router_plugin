@@ -1,4 +1,4 @@
-package com.tojoy.hybrid_manager;
+package com.tojoy.tj_flutter_router_plugin;
 
 
 import java.util.ArrayList;
@@ -6,10 +6,10 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class HybridManager {
-    public static HybridManager shareManager = new HybridManager();
-    public static HybridManagerDelegate delegate;
-    public static HashMap<String, HybridManagerDelegate.Completion> completeCache = new HashMap<>();
+public class TJRouterManager {
+    public static TJRouterManager shareManager = new TJRouterManager();
+    public static TJRouterManagerDelegate delegate;
+    public static HashMap<String, TJRouterManagerDelegate.TJCompletion> completeCache = new HashMap<>();
     private static List<TJFlutterActivity> stack = new ArrayList<>();
 
 
@@ -19,7 +19,7 @@ public class HybridManager {
     }
 
     //出栈
-    static void pop() {
+    public static void pop() {
         if (!stack.isEmpty()) {
             TJFlutterActivity activity = stack.get(stack.size() - 1);
             activity.finish();

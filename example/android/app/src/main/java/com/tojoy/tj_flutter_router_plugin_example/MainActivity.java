@@ -1,30 +1,26 @@
-package com.tojoy.hybrid_manager_example;
+package com.tojoy.tj_flutter_router_plugin_example;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import com.tojoy.hybrid_manager.HybridManager;
-import com.tojoy.hybrid_manager.HybridManagerDelegate;
-import com.tojoy.hybrid_manager.TJFlutterActivity;
-import com.tojoy.hybrid_manager.TJHTTPResponse;
-
 import java.util.Map;
-
 import io.flutter.Log;
-import io.flutter.app.FlutterActivity;
-import io.flutter.plugins.GeneratedPluginRegistrant;
+import io.flutter.embedding.android.FlutterActivity;
+
+import com.tojoy.tj_flutter_router_plugin.TJFlutterActivity;
+import com.tojoy.tj_flutter_router_plugin.TJHTTPResponse;
+import com.tojoy.tj_flutter_router_plugin.TJRouterManager;
+import com.tojoy.tj_flutter_router_plugin.TJRouterManagerDelegate;
+
 
 public class MainActivity extends FlutterActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    GeneratedPluginRegistrant.registerWith(this);
 
-
-    HybridManager.delegate = new HybridManagerDelegate() {
+    TJRouterManager.delegate = new TJRouterManagerDelegate() {
       @Override
-      public void openURL(String url, Completion completion) {
+      public void openURL(String url, TJCompletion completion) {
         Uri uri = Uri.parse(url);
         Log.d("MainActivity***", uri.getAuthority());
         Log.d("MainActivity***", uri.getPath());
@@ -34,7 +30,7 @@ public class MainActivity extends FlutterActivity {
           startActivity(intent);
 
           //flutter回调
-          HybridManager.completeCache.put(url, new Completion() {
+          TJRouterManager.completeCache.put(url, new TJCompletion() {
             @Override
             public void completion(Object result) {
               Log.d("MainActivity***", "result:"+result);
@@ -52,19 +48,13 @@ public class MainActivity extends FlutterActivity {
           startActivity(intent);
         }
       }
+      
 
       @Override
       public void sendRequestWithURL(String url, Map params, TJHTTPResponse response) {
           response.onSuccess("onSuccess");
       }
 
-      @Override
-      public void registerWith(FlutterActivity activity) {
-        GeneratedPluginRegistrant.registerWith(activity);
-      }
     };
-
-
-
   }
 }

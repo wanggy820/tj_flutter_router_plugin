@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-#import <hybrid_manager/HybridManagerPlugin.h>
-#import <hybrid_manager/TJRouter.h>
-#import <hybrid_manager/UIViewController+Router.h>
+#import <tj_flutter_router_plugin/TJFlutterRouterPlugin.h>
+#import <tj_flutter_router_plugin/TJRouter.h>
+#import <tj_flutter_router_plugin/UIViewController+Router.h>
 
 @interface ViewController ()
 
@@ -33,12 +33,13 @@
     self.title = @"ViewController";
     self.view.backgroundColor = [UIColor redColor];
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    [btn setTitle:@"跳到flutter" forState:UIControlStateNormal];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, 100)];
+    //栈里有flutter页面才会有回调
+    [btn setTitle:@"回调参数到flutter" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
-    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(300, 100, 100, 100)];
+    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 300, UIScreen.mainScreen.bounds.size.width, 100)];
     [btn2 setTitle:@"跳到flutter vc2" forState:UIControlStateNormal];
     [btn2 addTarget:self action:@selector(btn2Click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];

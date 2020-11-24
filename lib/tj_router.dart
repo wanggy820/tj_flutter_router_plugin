@@ -1,20 +1,20 @@
-import 'hybrid_manager.dart';
 import 'dart:ui' as ui;
+import 'tj_flutter_router_plugin.dart';
 
 class TJRouter {
 
-  static openURL({String url, Completion complete}) {
-    HybridManagerPlugin.hybridManagerPlugin
+  static openURL({String url, TJCompletion complete}) {
+    TJFlutterRouterPlugin.plugin
         .openURL(url: url, complete: complete);
   }
 
   static pop() {
-    HybridManagerPlugin.hybridManagerPlugin.pop();
+    TJFlutterRouterPlugin.plugin.pop();
   }
 
   static void completion(dynamic result) {
     String router = ui.window.defaultRouteName;
     print(router);
-    return HybridManagerPlugin.hybridManagerPlugin.completion(router, result);
+    return TJFlutterRouterPlugin.plugin.completion(router, result);
   }
 }

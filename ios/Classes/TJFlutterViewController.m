@@ -1,6 +1,6 @@
 //
 //  TJFlutterViewController.m
-//  hybrid_manager
+//  router_manager
 //
 //  Created by wanggy820 on 2020/11/20.
 //
@@ -10,7 +10,7 @@
 #import "UIViewController+Router.h"
 #import <objc/message.h>
 #import <HBDNavigationBar/UIViewController+HBD.h>
-#import "HybridManager.h"
+#import "TJRouterManager.h"
 
 @interface TJFlutterViewController ()
 
@@ -25,7 +25,7 @@
         TJFlutterViewController *flutterVC = [[TJFlutterViewController alloc] initWithProject:nil initialRoute:url nibName:nil bundle:nil];
 
         [nav pushViewController:flutterVC animated:YES];
-        [HybridManager sharedInstance].completeCache[url] = routerParameters[TJRouterParameterCompletion];
+        [TJRouterManager sharedInstance].completeCache[url] = routerParameters[TJRouterParameterCompletion];
     }];
 }
 

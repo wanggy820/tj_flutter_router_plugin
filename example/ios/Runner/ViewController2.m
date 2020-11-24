@@ -7,8 +7,8 @@
 //
 
 #import "ViewController2.h"
-#import <hybrid_manager/TJRouter.h>
-#import <hybrid_manager/UIViewController+Router.h>
+#import <tj_flutter_router_plugin/TJRouter.h>
+#import <tj_flutter_router_plugin/UIViewController+Router.h>
 
 
 @interface ViewController2 ()

@@ -8,12 +8,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-//import 'package:hybrid_manager_example/main.dart';
+import 'package:tj_flutter_router_plugin_example/VC1.dart';
 
 void main() {
   testWidgets('Verify Platform version', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-//    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(VC1(""));
 
     // Verify that platform version is retrieved.
     expect(

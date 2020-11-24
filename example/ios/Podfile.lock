@@ -1,13 +1,13 @@
 PODS:
   - Flutter (1.0.0)
   - HBDNavigationBar (1.7.7)
-  - hybrid_manager (0.0.1):
+  - tj_flutter_router_plugin (0.0.1):
     - Flutter
     - HBDNavigationBar
 
 DEPENDENCIES:
-  - Flutter (from `.symlinks/flutter/ios`)
-  - hybrid_manager (from `.symlinks/plugins/hybrid_manager/ios`)
+  - Flutter (from `Flutter`)
+  - tj_flutter_router_plugin (from `.symlinks/plugins/tj_flutter_router_plugin/ios`)
 
 SPEC REPOS:
   trunk:
@@ -15,15 +15,15 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: ".symlinks/flutter/ios"
-  hybrid_manager:
-    :path: ".symlinks/plugins/hybrid_manager/ios"
+    :path: Flutter
+  tj_flutter_router_plugin:
+    :path: ".symlinks/plugins/tj_flutter_router_plugin/ios"
 
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   HBDNavigationBar: 6ba38b99637039c831ce460364d5398f29fa0685
-  hybrid_manager: d569aa5268cee79b48eb1e6a36a1e836ca1dc600
+  tj_flutter_router_plugin: 223e39525797493677fb4c13a77bd5f59e1efd9b
 
-PODFILE CHECKSUM: adec3c3a1723b478aab009b523f6164df8e05343
+PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
 
 COCOAPODS: 1.9.1

@@ -1,48 +1,49 @@
-package com.tojoy.hybrid_manager;
+package com.tojoy.tj_flutter_router_plugin;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
+
 import android.text.TextUtils;
 import android.util.Log;
+
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.NonNull;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
-import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-/** HybridManagerPlugin */
-public class HybridManagerPlugin implements MethodCallHandler {
-  private MethodChannel methodChannel;
+/** TjFlutterRouterPlugin */
+public class TJFlutterRouterPlugin implements FlutterPlugin, MethodChannel.MethodCallHandler {
+  /// The MethodChannel that will the communication between Flutter and native Android
+  ///
+  /// This local reference serves to register the plugin with the Flutter Engine and unregister it
+  /// when the Flutter Engine is detached from the Activity
+  private MethodChannel channel;
 
-  /** Plugin registration. */
-  public static void registerWith(Registrar registrar) {
-
-    HybridManagerPlugin hybridManagerplugin = new HybridManagerPlugin();
-    hybridManagerplugin.methodChannel = new MethodChannel(registrar.messenger(), "hybrid_manager");
-    hybridManagerplugin.methodChannel.setMethodCallHandler(hybridManagerplugin);
+  @Override
+  public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
+    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "tj_flutter_router_plugin");
+    channel.setMethodCallHandler(this);
   }
 
   @Override
-  public void onMethodCall(MethodCall call, Result result) {
+  public void onMethodCall(@NonNull MethodCall call, @NonNull MethodChannel.Result result) {
     Log.e("*****", call.method);
 
     if ("openURL".equals(call.method)) {
       HashMap openUrlInfo = (HashMap) call.arguments;
       final String url = (String) openUrlInfo.get("url");
-      if (HybridManager.delegate != null) {
-        HybridManager.delegate.openURL(url, new HybridManagerDelegate.Completion() {
+      if (TJRouterManager.delegate != null) {
+        TJRouterManager.delegate.openURL(url, new TJRouterManagerDelegate.TJCompletion() {
           @Override
           public void completion(Object result) {
-            if (HybridManager.completeCache.get(url) != null) {
+            if (TJRouterManager.completeCache.get(url) != null) {
               return;
             }
             Map arguments = new HashMap();
             arguments.put("url", url);
             arguments.put("result", result);
-            methodChannel.invokeMethod("completion", arguments);
+            channel.invokeMethod("completion", arguments);
           }
         });
       }
@@ -51,14 +52,14 @@ public class HybridManagerPlugin implements MethodCallHandler {
     }
 
     if ("pop".equals(call.method)) {
-      HybridManager.pop();
+      TJRouterManager.pop();
       result.success("OK");
       return;
     }
 
     //调用原生网络请求
     if ("sendRequestWithURL".equals(call.method)) {
-      if (HybridManager.delegate != null) {
+      if (TJRouterManager.delegate != null) {
         HashMap arguments = (HashMap) call.arguments;
         String url = (String) arguments.get("url");
         HashMap params = (HashMap) arguments.get("params");
@@ -74,14 +75,19 @@ public class HybridManagerPlugin implements MethodCallHandler {
       HashMap arguments = (HashMap) call.arguments;
       String url = (String) arguments.get("url");
       Object result1 = arguments.get("result");
-      if (!TextUtils.isEmpty(url) && HybridManager.completeCache.get(url) != null) {
-        HybridManager.completeCache.get(url).completion(result1);
+      if (!TextUtils.isEmpty(url) && TJRouterManager.completeCache.get(url) != null) {
+        TJRouterManager.completeCache.get(url).completion(result1);
       }
       result.success("OK");
       return;
     }
 
     result.notImplemented();
+  }
+
+  @Override
+  public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+    channel.setMethodCallHandler(null);
   }
 
   private void sendRequestWithURL(final String url,  Map params) {
@@ -93,7 +99,7 @@ public class HybridManagerPlugin implements MethodCallHandler {
         result.put("url", url);
         result.put("success", true);
         result.put("response", response);
-        methodChannel.invokeMethod("sendRequestWithURL", result);
+        channel.invokeMethod("sendRequestWithURL", result);
       }
 
       @Override
@@ -103,9 +109,9 @@ public class HybridManagerPlugin implements MethodCallHandler {
         result.put("url", url);
         result.put("success", false);
         result.put("error", error);
-        methodChannel.invokeMethod("sendRequestWithURL", result);
+        channel.invokeMethod("sendRequestWithURL", result);
       }
     };
-    HybridManager.delegate.sendRequestWithURL(url, params, response);
+    TJRouterManager.delegate.sendRequestWithURL(url, params, response);
   }
 }

@@ -1,9 +1,11 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hybrid_manager/hybrid_manager.dart';
+import 'package:tj_flutter_router_plugin/tj_flutter_router_plugin.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('hybrid_manager');
+  const MethodChannel channel = MethodChannel('tj_flutter_router_plugin');
+
+  TestWidgetsFlutterBinding.ensureInitialized();
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
@@ -15,7 +17,5 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-//    expect(await HybridManagerPlugin.platformVersion, '42');
-  });
+
 }

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/hybrid_manager.iml" filepath="$PROJECT_DIR$/hybrid_manager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/hybrid_manager_android.iml" filepath="$PROJECT_DIR$/android/hybrid_manager_android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/example/android/hybrid_manager_example_android.iml" filepath="$PROJECT_DIR$/example/android/hybrid_manager_example_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tj_flutter_router_plugin.iml" filepath="$PROJECT_DIR$/tj_flutter_router_plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/tj_flutter_router_plugin_android.iml" filepath="$PROJECT_DIR$/android/tj_flutter_router_plugin_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/tj_flutter_router_plugin_example_android.iml" filepath="$PROJECT_DIR$/example/android/tj_flutter_router_plugin_example_android.iml" />
     </modules>
   </component>
 </project>

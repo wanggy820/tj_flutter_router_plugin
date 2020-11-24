@@ -1,19 +1,19 @@
 //
-//  HybridManager.m
-//  hybrid_manager
+//  TJRouterManager.m
+//  TJRouter_manager
 //
 //  Created by wanggy820 on 2020/11/20.
 //
 
-#import "HybridManager.h"
+#import "TJRouterManager.h"
 
-@implementation HybridManager
+@implementation TJRouterManager
 
 + (instancetype)sharedInstance{
-    static HybridManager *instance;
+    static TJRouterManager *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[HybridManager alloc] init];
+        instance = [[TJRouterManager alloc] init];
         instance.completeCache = [NSMutableDictionary dictionary];
     });
     return instance;

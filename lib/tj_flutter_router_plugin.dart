@@ -1,15 +1,16 @@
+
 import 'package:flutter/services.dart';
 
 typedef TJHttpResponse(String response, bool success, String error);
-typedef Completion(dynamic result);
-class HybridManagerPlugin {
-  MethodChannel _channel;
-  static HybridManagerPlugin hybridManagerPlugin = new HybridManagerPlugin._internal();
+typedef TJCompletion(dynamic result);
+class TJFlutterRouterPlugin {
+  static const MethodChannel _channel = const MethodChannel('tj_flutter_router_plugin');
+  static TJFlutterRouterPlugin plugin = new TJFlutterRouterPlugin._internal();
   Map<String, TJHttpResponse> requestMap = new Map();
   Map<String, Function(dynamic result)> completionMap = new Map();
-  HybridManagerPlugin._internal() {
+
+  TJFlutterRouterPlugin._internal() {
     //原生调用flutter
-    _channel = new MethodChannel('hybrid_manager');
     _channel.setMethodCallHandler((MethodCall methodCall) {
       String method = methodCall.method;
       Map arguments = methodCall.arguments;
@@ -28,7 +29,7 @@ class HybridManagerPlugin {
     });
   }
 
-  openURL({String url, Completion complete}) {
+  openURL({String url, TJCompletion complete}) {
     _channel.invokeMethod("openURL", {
       "url": url ?? ""
     });

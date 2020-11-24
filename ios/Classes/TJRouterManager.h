@@ -1,6 +1,6 @@
 //
-//  HybridManager.h
-//  hybrid_manager
+//  TJRouterManager.h
+//  TJRouter_manager
 //
 //  Created by wanggy820 on 2020/11/20.
 //
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol HybridManagerDelegate <NSObject>
+@protocol TJRouterManagerDelegate <NSObject>
 
 @optional
 //走原生网络请求
@@ -17,10 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface HybridManager : NSObject
+@interface TJRouterManager : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary <NSString *, void (^)(id _Nullable result)>*completeCache;
-@property (nonatomic, weak) id<HybridManagerDelegate> delegate;
+@property (nonatomic, weak) id<TJRouterManagerDelegate> delegate;
 
 + (instancetype)sharedInstance;
 
