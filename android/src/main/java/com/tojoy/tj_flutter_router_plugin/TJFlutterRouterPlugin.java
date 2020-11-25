@@ -1,6 +1,7 @@
 package com.tojoy.tj_flutter_router_plugin;
 
 
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -31,21 +32,24 @@ public class TJFlutterRouterPlugin implements FlutterPlugin, MethodChannel.Metho
     Log.e("*****", call.method);
 
     if ("openURL".equals(call.method)) {
-      HashMap openUrlInfo = (HashMap) call.arguments;
-      final String url = (String) openUrlInfo.get("url");
+      final String url = (String) call.arguments;
       if (TJRouterManager.delegate != null) {
-        TJRouterManager.delegate.openURL(url, new TJRouterManagerDelegate.TJCompletion() {
+        TJRouterManagerDelegate.TJCompletion completion = new TJRouterManagerDelegate.TJCompletion() {
           @Override
-          public void completion(Object result) {
-            if (TJRouterManager.completeCache.get(url) != null) {
-              return;
-            }
+          public void completion(String url, Object result) {
             Map arguments = new HashMap();
             arguments.put("url", url);
             arguments.put("result", result);
             channel.invokeMethod("completion", arguments);
+
+
+            if (TJRouterManager.completion != null) {
+              TJRouterManager.completion.completion(url, result);
+            }
           }
-        });
+        };
+        TJRouterManager.completeCache.put(url, completion);
+        TJRouterManager.delegate.openURL(url, completion);
       }
       result.success("OK");
       return;
@@ -64,10 +68,8 @@ public class TJFlutterRouterPlugin implements FlutterPlugin, MethodChannel.Metho
         String url = (String) arguments.get("url");
         HashMap params = (HashMap) arguments.get("params");
 
-        sendRequestWithURL(url, params);
+        sendRequestWithURL(url, params, result);
       }
-
-      result.success("OK");
       return;
     }
 
@@ -76,7 +78,7 @@ public class TJFlutterRouterPlugin implements FlutterPlugin, MethodChannel.Metho
       String url = (String) arguments.get("url");
       Object result1 = arguments.get("result");
       if (!TextUtils.isEmpty(url) && TJRouterManager.completeCache.get(url) != null) {
-        TJRouterManager.completeCache.get(url).completion(result1);
+        TJRouterManager.completeCache.get(url).completion(url, result1);
       }
       result.success("OK");
       return;
@@ -90,26 +92,22 @@ public class TJFlutterRouterPlugin implements FlutterPlugin, MethodChannel.Metho
     channel.setMethodCallHandler(null);
   }
 
-  private void sendRequestWithURL(final String url,  Map params) {
+  private void sendRequestWithURL(final String url, Map params, final MethodChannel.Result result) {
     TJHTTPResponse response = new TJHTTPResponse() {
       @Override
       public void onSuccess(String response) {
-        Map result = new HashMap();
-        result.putAll(result);
-        result.put("url", url);
-        result.put("success", true);
-        result.put("response", response);
-        channel.invokeMethod("sendRequestWithURL", result);
+        Map arguments = new HashMap();
+        arguments.put("success", true);
+        arguments.put("response", response);
+        result.success(arguments);
       }
 
       @Override
       public void onError(String error) {
-        Map result = new HashMap();
-        result.putAll(result);
-        result.put("url", url);
-        result.put("success", false);
-        result.put("error", error);
-        channel.invokeMethod("sendRequestWithURL", result);
+        Map arguments = new HashMap();
+        arguments.put("success", false);
+        arguments.put("error", error);
+        result.success(arguments);
       }
     };
     TJRouterManager.delegate.sendRequestWithURL(url, params, response);

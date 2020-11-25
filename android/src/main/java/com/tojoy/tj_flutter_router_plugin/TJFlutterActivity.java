@@ -26,6 +26,7 @@ public class TJFlutterActivity extends FlutterActivity {
     @NonNull
     @Override
     public String getInitialRoute() {
+
         return TJFlutterActivity.this.getIntent().getStringExtra("url");
     }
 }

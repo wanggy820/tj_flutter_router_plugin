@@ -71,7 +71,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             RaisedButton(
               onPressed: (){
-                TJRouter.openURL(url: "tojoy://flutter?page=vc1&key=value&title=我的title");
+                TJRouter.openURL("tojoy://flutter?page=vc1&key=value&title=我的title", completion: (dynamic result){
+                  print("flutter?page=vc1收到回调：" + result.toString());
+                });
                 TJRouter.completion("跳转到flutter页面vc1");
               },
               child: Text("跳转到flutter页面vc1"),
@@ -79,34 +81,33 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             RaisedButton(
               onPressed: (){
-                TJRouter.openURL(url: "tojoy://flutter?page=vc2&key=value&title=我的title", complete: (dynamic result){
-                  print("收到回调：" + result);
-                } );
+                TJRouter.openURL("tojoy://flutter?page=vc2&key=value&title=我的title", completion: (dynamic result){
+                  print("flutter?page=vc2收到回调：" + result);
+                });
               },
               child: Text("跳转到flutter页面vc2"),
               color: Colors.red,
             ),
             RaisedButton(
               onPressed: (){
-                TJRouter.openURL(url: "tojoy://native/vc1?key=value&title=我的title", complete: (dynamic result){
-                  print("收到回调：" + result);
-                } );
+                TJRouter.openURL("tojoy://native/vc1?key=value&title=我的title", completion: (dynamic result){
+                  print("tojoy://native/vc1收到回调：" + result);
+                });
               },
               child: Text("跳转到native页面vc1"),
               color: Colors.red,
             ),
             RaisedButton(
               onPressed: (){
-                TJRouter.openURL(url: "tojoy://native/vc2?key=value&title=我的title");
+                TJRouter.openURL("tojoy://native/vc2?key=value&title=我的title");
               },
               child: Text("跳转到native页面vc2"),
               color: Colors.red,
             ),
             RaisedButton(
-              onPressed: (){
-                 TJHTTPResquest.sendRequestWithURL("http://www.baidu.com", {"key":"value"}, (response, success, error){
-                    print("网络请求:response"+response);
-                  });
+              onPressed: () async {
+                Map result = await TJHTTPResquest.sendRequestWithURL("http://www.baidu.com", {"key":"value"});
+                print("网络请求:response"+result.toString());
               },
               child: Text("网络请求"),
               color: Colors.red,

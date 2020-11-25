@@ -23,14 +23,9 @@
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
     if ([@"openURL" isEqualToString:call.method]) {//flutter 打开原生
-        NSString *url = call.arguments[@"url"];
-        [TJRouter openURL:url completion:^(id  _Nonnull result) {
-            //flutter本身不需要回调
-            if ([TJRouterManager sharedInstance].completeCache[url]) {
-                return;
-            }
+        [TJRouter openURL:call.arguments completion:^(id  _Nonnull result) {
             NSMutableDictionary *arguments = [NSMutableDictionary dictionary];
-            arguments[@"url"] = url;
+            arguments[@"url"] = call.arguments;
             arguments[@"result"] = result;
             [self invokeMethod:@"completion" arguments:arguments];
         }];
@@ -39,7 +34,7 @@
         [nav popViewControllerAnimated:YES];
     } else if ([@"sendRequestWithURL" isEqualToString:call.method]) {//请求网络
         NSDictionary *arguments = call.arguments;
-        [self sendRequestWithURL:arguments[@"url"] params:arguments[@"params"]];
+        [self sendRequestWithURL:arguments[@"url"] params:arguments[@"params"] result:result];
     } else if ([@"completion" isEqualToString:call.method]) {
         NSString *url = call.arguments[@"url"];
         id result = call.arguments[@"result"];
@@ -59,19 +54,18 @@
     }];
 }
 
-- (void)sendRequestWithURL:(NSString *)url params:(NSDictionary *)params {
+- (void)sendRequestWithURL:(NSString *)url params:(NSDictionary *)params result:(FlutterResult)result {
     if (![[TJRouterManager sharedInstance].delegate respondsToSelector:@selector(sendRequestWithURL:params:completion:)]) {
         return;
     }
     void (^completion)(NSString *, BOOL, NSString *) = ^(NSString *response, BOOL success, NSString *error) {
         //回调给flutter
         NSMutableDictionary *arguments = [NSMutableDictionary dictionary];
-        arguments[@"url"] = url;
         arguments[@"success"] = @(success);
         arguments[@"error"] = error;
         arguments[@"response"] = response;
 
-        [self invokeMethod:@"sendRequestWithURL" arguments:arguments];
+        result(arguments);
     };
     [[TJRouterManager sharedInstance].delegate sendRequestWithURL:url params:params completion:completion];
 }

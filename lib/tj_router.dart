@@ -3,9 +3,8 @@ import 'tj_flutter_router_plugin.dart';
 
 class TJRouter {
 
-  static openURL({String url, TJCompletion complete}) {
-    TJFlutterRouterPlugin.plugin
-        .openURL(url: url, complete: complete);
+  static void openURL(String url, {TJCompletion completion}) {
+     TJFlutterRouterPlugin.plugin.openURL(url, completion: completion);
   }
 
   static pop() {

@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0aabb20b-2e50-43e2-bc7b-81ceec5da5bc" name="Default Changelist" comment="" />
+    <list default="true" id="0aabb20b-2e50-43e2-bc7b-81ceec5da5bc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterRouterPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterRouterPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManagerDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManagerDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/Activity1.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/Activity1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/layout/layout1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/layout/layout1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/.last_build_id" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/.last_build_id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/VC2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/VC2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/TJFlutterRouterPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/TJFlutterRouterPlugin.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tj_flutter_router_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tj_flutter_router_plugin.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tj_http_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tj_http_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tj_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tj_router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tj_flutter_router_plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tj_flutter_router_plugin.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Nexus_5X_API_29]" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1kiRWhjfrUWwFC0vcDGS0z8I8fh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -34,25 +59,55 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="238" key="GridCell.Tab.0.bottom" timestamp="1606184446072">
+    <state width="1398" height="249" key="GridCell.Tab.0.bottom" timestamp="1606297865659">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="266" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606292613245" />
+    <state width="1398" height="249" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1606297865659" />
+    <state width="1398" height="249" key="GridCell.Tab.0.center" timestamp="1606297865658">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="266" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606292613243" />
+    <state width="1398" height="249" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1606297865658" />
+    <state width="1398" height="249" key="GridCell.Tab.0.left" timestamp="1606297865658">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="266" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606292613243" />
+    <state width="1398" height="249" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1606297865658" />
+    <state width="1398" height="249" key="GridCell.Tab.0.right" timestamp="1606297865659">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="266" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606292613244" />
+    <state width="1398" height="249" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1606297865659" />
+    <state x="412" y="223" width="615" height="490" key="find.popup" timestamp="1606295072950">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="412" y="205" width="615" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606287834338" />
+    <state x="412" y="223" width="615" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1606295072950" />
+    <state width="300" height="98" key="javadoc.popup.new" timestamp="1606292251234">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606184446072" />
-    <state width="1398" height="238" key="GridCell.Tab.0.center" timestamp="1606184446071">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606184446071" />
-    <state width="1398" height="238" key="GridCell.Tab.0.left" timestamp="1606184446071">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606184446071" />
-    <state width="1398" height="238" key="GridCell.Tab.0.right" timestamp="1606184446072">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606184446072" />
-    <state width="300" height="98" key="javadoc.popup.new" timestamp="1606182820737">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="300" height="98" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1606182820737" />
+    <state width="300" height="98" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1606292251234" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/tj_flutter_router_plugin.dart</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/tj_flutter_router_plugin.dart</url>
+          <line>14</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/tj_flutter_router_plugin.dart</url>
+          <line>37</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

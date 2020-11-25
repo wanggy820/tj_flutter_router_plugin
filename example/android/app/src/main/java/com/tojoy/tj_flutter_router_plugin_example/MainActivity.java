@@ -29,19 +29,12 @@ public class MainActivity extends FlutterActivity {
           intent.putExtra("url", url);
           startActivity(intent);
 
-          //flutter回调
-          TJRouterManager.completeCache.put(url, new TJCompletion() {
-            @Override
-            public void completion(Object result) {
-              Log.d("MainActivity***", "result:"+result);
-            }
-          });
         } else if ("/vc1".equals(uri.getPath())) {
           Intent intent = new Intent(MainActivity.this, Activity1.class);
           intent.putExtra("url", url);
           startActivity(intent);
           //原生传给flutter的回调
-          completion.completion("lalala");
+          completion.completion(url, "lalala");
         } else if ("/vc2".equals(uri.getPath())) {
           Intent intent = new Intent(MainActivity.this, Activity2.class);
           intent.putExtra("url", url);
@@ -55,6 +48,13 @@ public class MainActivity extends FlutterActivity {
           response.onSuccess("onSuccess");
       }
 
+    };
+
+    TJRouterManager.completion = new TJRouterManagerDelegate.TJCompletion() {
+      @Override
+      public void completion(String url, Object result) {
+        Log.d("MainActivity***", "回调："+result.toString());
+      }
     };
   }
 }

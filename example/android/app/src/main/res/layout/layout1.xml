@@ -14,13 +14,15 @@
         android:textColor="#ffffff"
         android:text="@string/Activity1" />
 
-    <ImageButton
+    <Button
         android:id="@+id/imageButton"
+        android:text="回调flutter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp"
+        android:onClick="click"
         android:gravity="center"
         tools:src="@tools:sample/avatars"
         android:contentDescription="@string/btn" />
