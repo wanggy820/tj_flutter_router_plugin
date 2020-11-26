@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aabb20b-2e50-43e2-bc7b-81ceec5da5bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterRouterPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterRouterPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManagerDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManagerDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/Activity1.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/Activity1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/layout/layout1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/layout/layout1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/.last_build_id" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/.last_build_id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/VC2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/VC2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/TJFlutterRouterPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/TJFlutterRouterPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/tj_flutter_router_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tj_flutter_router_plugin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/tj_http_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tj_http_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/tj_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tj_router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tj_flutter_router_plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tj_flutter_router_plugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
