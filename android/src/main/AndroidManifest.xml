@@ -12,5 +12,9 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name=".TJWebViewActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"/>
     </application>
 </manifest>

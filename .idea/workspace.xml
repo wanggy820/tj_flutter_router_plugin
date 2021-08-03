@@ -2,10 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aabb20b-2e50-43e2-bc7b-81ceec5da5bc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/Route.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJWebViewActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/tj_web_view_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterRouterPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJFlutterRouterPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJRouterManagerDelegate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/Activity1.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/Activity1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/Activity2.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/Activity2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/tojoy/tj_flutter_router_plugin_example/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/layout/layout1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/layout/layout1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/layout/layout2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/layout/layout2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/ViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/ViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/ViewController2.m" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/ViewController2.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/VC1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/VC1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/VC2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/VC2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/TJFlutterRouterPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/TJFlutterRouterPlugin.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/TJFlutterViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/TJFlutterViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/TJFlutterViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/TJFlutterViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/TJRouter.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/TJRouter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/TJRouter.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/TJRouter.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/TJRouterManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/TJFlutterManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/TJRouterManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/TJFlutterManager.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/UIViewController+Router.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/UIViewController+Router.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/tj_flutter_router_plugin.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/tj_flutter_router_plugin.podspec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +49,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Nexus_5X_API_29]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[3PL5T17331018477]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -46,35 +82,35 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="249" key="GridCell.Tab.0.bottom" timestamp="1606297865659">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="266" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606292613245" />
-    <state width="1398" height="249" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1606297865659" />
-    <state width="1398" height="249" key="GridCell.Tab.0.center" timestamp="1606297865658">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="266" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606292613243" />
-    <state width="1398" height="249" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1606297865658" />
-    <state width="1398" height="249" key="GridCell.Tab.0.left" timestamp="1606297865658">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="266" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606292613243" />
-    <state width="1398" height="249" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1606297865658" />
-    <state width="1398" height="249" key="GridCell.Tab.0.right" timestamp="1606297865659">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="266" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606292613244" />
-    <state width="1398" height="249" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1606297865659" />
-    <state x="412" y="223" width="615" height="490" key="find.popup" timestamp="1606295072950">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="412" y="205" width="615" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606287834338" />
-    <state x="412" y="223" width="615" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1606295072950" />
-    <state width="300" height="98" key="javadoc.popup.new" timestamp="1606292251234">
+    <state x="394" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1627888309951">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="300" height="98" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1606292251234" />
+    <state x="394" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1627888309951" />
+    <state width="1398" height="265" key="GridCell.Tab.0.bottom" timestamp="1627953869149">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1627953869149" />
+    <state width="1398" height="265" key="GridCell.Tab.0.center" timestamp="1627953869148">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1627953869148" />
+    <state width="1398" height="265" key="GridCell.Tab.0.left" timestamp="1627953869148">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1627953869148" />
+    <state width="1398" height="265" key="GridCell.Tab.0.right" timestamp="1627953869149">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1627953869149" />
+    <state x="412" y="205" width="668" height="490" key="find.popup" timestamp="1627887175039">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="412" y="205" width="668" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1627887175039" />
+    <state width="300" height="98" key="javadoc.popup.new" timestamp="1627875385847">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="300" height="98" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1627874385929" />
+    <state width="300" height="98" key="javadoc.popup.new/0.25.1440.875@0.25.1440.875" timestamp="1627875385847" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

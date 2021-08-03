@@ -1,8 +1,8 @@
 #import "TJFlutterRouterPlugin.h"
-#import "UIViewController+Router.h"
+#import "NSObject+Router.h"
 #import <objc/message.h>
 #import <HBDNavigationBar/UIViewController+HBD.h>
-#import "TJRouterManager.h"
+#import "TJFlutterManager.h"
 #import "TJRouter.h"
 
 @interface TJFlutterRouterPlugin ()
@@ -38,11 +38,8 @@
     } else if ([@"completion" isEqualToString:call.method]) {
         NSString *url = call.arguments[@"url"];
         id result = call.arguments[@"result"];
-        if (url && [TJRouterManager sharedInstance].completeCache[url]) {
-            [TJRouterManager sharedInstance].completeCache[url](result);
-        }
-    }
-    else {
+        [[TJFlutterManager sharedInstance] result:result completionForRoute:url];
+    } else {
         result(FlutterMethodNotImplemented);
     }
 }
@@ -50,12 +47,12 @@
 //调用flutter,把请求结果返回给flutter
 - (void)invokeMethod:(NSString*)method arguments:(id)arguments {
     [self.channel invokeMethod:method arguments:arguments result:^(id  _Nullable result) {
-        NSLog(@"*********result:%@", result);
+        NSLog(@"flutter invokeMethod result:%@", result);
     }];
 }
 
 - (void)sendRequestWithURL:(NSString *)url params:(NSDictionary *)params result:(FlutterResult)result {
-    if (![[TJRouterManager sharedInstance].delegate respondsToSelector:@selector(sendRequestWithURL:params:completion:)]) {
+    if (![[TJFlutterManager sharedInstance].requestDelegate respondsToSelector:@selector(sendRequestWithURL:params:completion:)]) {
         return;
     }
     void (^completion)(NSString *, BOOL, NSString *) = ^(NSString *response, BOOL success, NSString *error) {
@@ -67,7 +64,7 @@
 
         result(arguments);
     };
-    [[TJRouterManager sharedInstance].delegate sendRequestWithURL:url params:params completion:completion];
+    [[TJFlutterManager sharedInstance].requestDelegate sendRequestWithURL:url params:params completion:completion];
 }
 
 @end

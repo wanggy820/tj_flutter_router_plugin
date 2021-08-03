@@ -16,12 +16,15 @@
 
     <ImageButton
         android:id="@+id/imageButton"
+        android:text="click"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp"
         android:gravity="center"
-        tools:src="@tools:sample/avatars"
+        android:src="@android:mipmap/sym_def_app_icon"
+        tools:src="@tools:sample/us_phones"
         android:contentDescription="@string/btn" />
+
 </RelativeLayout>

@@ -14,19 +14,18 @@ public class TJFlutterActivity extends FlutterActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TJRouterManager.push(this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Log.e("TJFlutterActivity", "onDestroy");
+        TJFlutterManager.removeCompletionForRoute(getInitialRoute());
     }
 
     @NonNull
     @Override
     public String getInitialRoute() {
-
         return TJFlutterActivity.this.getIntent().getStringExtra("url");
     }
 }

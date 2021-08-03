@@ -31,3 +31,7 @@ android {
         disable 'InvalidPackage'
     }
 }
+
+dependencies {
+    compile'com.alibaba:arouter-api:1.5.2'
+}

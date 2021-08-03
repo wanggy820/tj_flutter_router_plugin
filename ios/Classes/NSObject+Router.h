@@ -1,5 +1,5 @@
 //
-//  UIViewController+Router.h
+//  NSObject+Router.h
 //  AFNetworking
 //
 //  Created by rr wanggy on 2019/4/10.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewController (Router)
+@interface NSObject (Router)
 
 + (UIViewController*)currentViewController;
 + (UINavigationController*)currentNavigationController;

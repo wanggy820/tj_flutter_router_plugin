@@ -1,12 +1,12 @@
 #include "AppDelegate.h"
 #include "GeneratedPluginRegistrant.h"
 #import "ViewController.h"
-#import <tj_flutter_router_plugin/UIViewController+Router.h>
-#import <tj_flutter_router_plugin/TJRouterManager.h>
+
+#import <tj_flutter_router_plugin/TJFlutterManager.h>
 #import <tj_flutter_router_plugin/TJRouter.h>
 #import <HBDNavigationBar/HBDNavigationController.h>
 
-@interface AppDelegate ()<TJRouterManagerDelegate>
+@interface AppDelegate ()<TJFlutterRequestDelegate>
 
 @end
 
@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [TJRouterManager sharedInstance].delegate = self;
+    [TJFlutterManager sharedInstance].requestDelegate = self;
     ViewController *vc = [ViewController new];
     HBDNavigationController *nav = [[HBDNavigationController alloc] initWithRootViewController:vc];
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];

@@ -45,9 +45,43 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        automaticallyImplyLeading: false,
+        title: Row(
+          children: <Widget>[
+            Expanded(
+              flex: 1,
+              child: Stack(
+                alignment: Alignment(-1, -1),
+                children: <Widget>[
+                  IconButton(
+                    padding: EdgeInsets.only(right: 60),
+                    icon: Image(height:44,width: 44,image: AssetImage('lib/images/back_icon.png')),
+                    color: Colors.black,
+                    highlightColor: Colors.transparent,
+                    onPressed: () {
+                      print("点击返回图标");
+                      TJRouter.pop();
+                    },
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+                flex: 1,
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text(
+                    widget.title,
+                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  ),
+                )),
+            Expanded(
+              child: Text(""),
+              flex: 1,
+            )
+          ],
+        ),
+        backgroundColor: Colors.white,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -71,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             RaisedButton(
               onPressed: (){
-                TJRouter.openURL("tojoy://flutter?page=vc1&key=value&title=我的title", completion: (dynamic result){
+                TJRouter.openURL("flutter://tojoy/page1?page=vc1&key=value&title=我的title1", completion: (dynamic result){
                   print("flutter?page=vc1收到回调：" + result.toString());
                 });
                 TJRouter.completion("跳转到flutter页面vc1");
@@ -81,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             RaisedButton(
               onPressed: (){
-                TJRouter.openURL("tojoy://flutter?page=vc2&key=value&title=我的title", completion: (dynamic result){
+                TJRouter.openURL("flutter://tojoy/page2?page=vc2&key=value&title=我的title2", completion: (dynamic result){
                   print("flutter?page=vc2收到回调：" + result);
                 });
               },
@@ -90,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             RaisedButton(
               onPressed: (){
-                TJRouter.openURL("tojoy://native/vc1?key=value&title=我的title", completion: (dynamic result){
+                TJRouter.openURL("native://tojoy/vc1?key=value&title=我的title", completion: (dynamic result){
                   print("tojoy://native/vc1收到回调：" + result);
                 });
               },
@@ -99,9 +133,16 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             RaisedButton(
               onPressed: (){
-                TJRouter.openURL("tojoy://native/vc2?key=value&title=我的title");
+                TJRouter.openURL("native://tojoy/vc2?key=value&title=我的title");
               },
               child: Text("跳转到native页面vc2"),
+              color: Colors.red,
+            ),
+            RaisedButton(
+              onPressed: (){
+                TJRouter.openURL("https://www.baidu.com");
+              },
+              child: Text("跳转到h5页面"),
               color: Colors.red,
             ),
             RaisedButton(

@@ -6,27 +6,24 @@
 //
 
 #import "TJFlutterViewController.h"
-#import "TJRouter.h"
-#import "UIViewController+Router.h"
 #import <objc/message.h>
 #import <HBDNavigationBar/UIViewController+HBD.h>
-#import "TJRouterManager.h"
+#import "TJFlutterManager.h"
 
 @interface TJFlutterViewController ()
+
+@property (nonatomic, copy) NSString *route;
 
 @end
 
 @implementation TJFlutterViewController
 
-+ (void)load {
-    [TJRouter registerURLPattern:@"tojoy://flutter" toHandler:^(NSDictionary * _Nonnull routerParameters) {
-        UINavigationController *nav = [UIViewController currentNavigationController];
-        NSString *url = routerParameters[TJRouterParameterURL];
-        TJFlutterViewController *flutterVC = [[TJFlutterViewController alloc] initWithProject:nil initialRoute:url nibName:nil bundle:nil];
-
-        [nav pushViewController:flutterVC animated:YES];
-        [TJRouterManager sharedInstance].completeCache[url] = routerParameters[TJRouterParameterCompletion];
-    }];
+- (instancetype)initWithRoute:(NSString *)initialRoute completion:(void (^)(id _Nonnull))completion {
+    if (self = [super initWithProject:nil initialRoute:initialRoute nibName:nil bundle:nil]) {
+        self.route = initialRoute;
+        [[TJFlutterManager sharedInstance] setCompletion:completion forRoute:initialRoute];
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
@@ -36,6 +33,10 @@
     
     //注册
     ((void (*)(id, SEL, id))objc_msgSend)(NSClassFromString(@"GeneratedPluginRegistrant"), NSSelectorFromString(@"registerWithRegistry:"), self);
+}
+
+- (void)dealloc {
+    [[TJFlutterManager sharedInstance] removeCompletionForRoute:self.route];
 }
 
 /*

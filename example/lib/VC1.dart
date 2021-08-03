@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //     print("原生回调result:${result}");
       //   });
       // });
-      TJRouter.pop();
+      // TJRouter.pop();
       TJRouter.completion(_counter);
     });
   }
@@ -84,9 +84,43 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        automaticallyImplyLeading: false,
+        title: Row(
+          children: <Widget>[
+            Expanded(
+              flex: 1,
+              child: Stack(
+                alignment: Alignment(-1, -1),
+                children: <Widget>[
+                  IconButton(
+                    padding: EdgeInsets.only(right: 60),
+                    icon: Image(height:44,width: 44,image: AssetImage('lib/images/back_icon.png')),
+                    color: Colors.black,
+                    highlightColor: Colors.transparent,
+                    onPressed: () {
+                      print("点击返回图标");
+                      TJRouter.pop();
+                    },
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+                flex: 1,
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text(
+                    widget.title,
+                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  ),
+                )),
+            Expanded(
+              child: Text(""),
+              flex: 1,
+            )
+          ],
+        ),
+        backgroundColor: Colors.white,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it

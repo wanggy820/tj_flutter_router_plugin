@@ -1,13 +1,13 @@
 //
-//  UIViewController+Router.m
+//  NSObject+Router.m
 //  AFNetworking
 //
 //  Created by rr wanggy on 2019/4/10.
 //
 
-#import "UIViewController+Router.h"
+#import "NSObject+Router.h"
 
-@implementation UIViewController (Router)
+@implementation NSObject (Router)
 
 + (UIViewController*)currentViewController {
     //获得当前活动窗口的根视图
@@ -38,18 +38,18 @@
 }
 
 + (UINavigationController*)currentNavigationController {
-    UIViewController * aCurrentVC = [UIViewController currentViewController];
-    UINavigationController * aCurrentNav = aCurrentVC.navigationController;
-    if (!aCurrentNav) {
-        UIViewController * aTabbarVC = [self window].rootViewController;
-        if ([aTabbarVC isKindOfClass:[UITabBarController class]]) {
-            aCurrentNav = ((UITabBarController *)aTabbarVC).selectedViewController;
+    UIViewController *currentVC = [UIViewController currentViewController];
+    UINavigationController *currentNav = currentVC.navigationController;
+    if (!currentNav) {
+        UIViewController * tabbarVC = [self window].rootViewController;
+        if ([tabbarVC isKindOfClass:[UITabBarController class]]) {
+            currentNav = ((UITabBarController *)tabbarVC).selectedViewController;
         } else {
-            aCurrentNav = aCurrentVC.navigationController;
+            currentNav = currentVC.navigationController;
         }
     }
-    if ([aCurrentNav isKindOfClass:[UINavigationController class]]) {
-        return aCurrentNav;
+    if ([currentNav isKindOfClass:[UINavigationController class]]) {
+        return currentNav;
     }
     return nil;
 }

@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TJFlutterViewController : FlutterViewController
 
+- (instancetype)initWithRoute:(nullable NSString*)initialRoute completion:(void (^)(id result))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END
