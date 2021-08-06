@@ -1,6 +1,5 @@
-package com.tojoy.tj_flutter_router_plugin;
+package com.tojoy.router;
 
-import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -8,6 +7,6 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.CLASS)
-public @interface Route {
-    String url();
+public @interface Router {
+	String url();
 }

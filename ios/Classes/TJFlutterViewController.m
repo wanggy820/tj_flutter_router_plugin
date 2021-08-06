@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.hbd_barHidden = YES;
-    
+    self.hbd_barStyle = UIBarStyleDefault;
     //注册
     ((void (*)(id, SEL, id))objc_msgSend)(NSClassFromString(@"GeneratedPluginRegistrant"), NSSelectorFromString(@"registerWithRegistry:"), self);
 }

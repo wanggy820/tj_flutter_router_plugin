@@ -15,6 +15,10 @@ import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.tojoy.router.AutoWired;
+import com.tojoy.router.Router;
+
 import androidx.annotation.Nullable;
 import static android.view.KeyEvent.KEYCODE_BACK;
 
@@ -24,6 +28,11 @@ public class TJWebViewActivity extends Activity {
     private TextView titleView;
     private ProgressBar progressBar;
     private WebView webView;
+
+    @AutoWired()
+    String url;
+    @AutoWired()
+    TJRouter.TJCompletion completion;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,7 +67,6 @@ public class TJWebViewActivity extends Activity {
         webSettings.setLoadsImagesAutomatically(true); //支持自动加载图片
         webSettings.setDefaultTextEncodingName("utf-8");//设置编码格式
 
-        String url = getIntent().getStringExtra("url");
         webView.loadUrl(url);
         webView.setWebViewClient(new WebViewClient(){
             @Override
@@ -86,17 +94,12 @@ public class TJWebViewActivity extends Activity {
             public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
                 Log.i("paypal","shouldInterceptRequest:" + url);
                 Uri uri = Uri.parse(url);
-                if ("flutter".equals(uri.getScheme())) {
-
-                    return null;
-                } else if ("native".equals(uri.getScheme())) {
-//                    ARouter.getInstance().build(url);
+                if ("flutter".equals(uri.getScheme()) || "native".equals(uri.getScheme())) {
+                    TJRouter.openURL(url);
                     return null;
                 }
                 return super.shouldInterceptRequest(view, url);
             }
-
-
         });
 
         webView.setWebChromeClient(new WebChromeClient(){

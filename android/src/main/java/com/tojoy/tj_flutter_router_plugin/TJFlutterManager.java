@@ -13,10 +13,17 @@ public class TJFlutterManager {
     private static HashMap<String, List<TJRouter.TJCompletion>> flutterRouteCompletions = new HashMap<>();
 
     public static void setRouteForCompletion(String route, TJRouter.TJCompletion completion) {
-        if (route == null || completion == null) {
+        if (route == null) {
             return;
         }
+        if (completion == null) {//站位用
+            completion = new TJRouter.TJCompletion() {
+                @Override
+                public void completion(Object result) {
 
+                }
+            };
+        }
         List <TJRouter.TJCompletion> list = flutterRouteCompletions.get(route);
         if (list == null) {
             list = new ArrayList<>();

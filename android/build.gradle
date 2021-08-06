@@ -33,5 +33,6 @@ android {
 }
 
 dependencies {
-    compile'com.alibaba:arouter-api:1.5.2'
+
+    implementation project(path: ':Router')
 }

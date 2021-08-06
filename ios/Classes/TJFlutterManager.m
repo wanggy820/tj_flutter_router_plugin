@@ -25,9 +25,13 @@
 }
 
 - (void)setCompletion:(void (^)(id _Nullable))completion forRoute:(nonnull NSString *)route {
-    if (!route || !completion) {
+    if (!route) {
         return;
     }
+    if (!completion) {
+        completion = ^(id result){};
+    }
+    
     NSMutableArray *array = self.flutterRouteCompletions[route];
     if (!array) {
         array = [NSMutableArray array];

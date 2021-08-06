@@ -10,6 +10,7 @@
 #import <tj_flutter_router_plugin/TJFlutterRouterPlugin.h>
 #import <tj_flutter_router_plugin/TJRouter.h>
 #import <objc/runtime.h>
+#import <HBDNavigationBar/UIViewController+HBD.h>
 
 @interface ViewController ()
 
@@ -37,7 +38,8 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"ViewController";
     self.view.backgroundColor = [UIColor redColor];
-
+    self.hbd_barAlpha = 0;
+    
     if (self.navigationController.viewControllers.count > 1) {
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, 100)];
         //栈里有flutter页面才会有回调
