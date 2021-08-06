@@ -1,6 +1,6 @@
 name: tj_flutter_router_plugin
 description: A new Flutter plugin.
-version: 0.0.2
+version: 0.0.4
 #author: wanggy820<wanggy820@163.com>
 homepage: https://github.com/wanggy820/tj_flutter_router_plugin
 #publish_to: 填写私有服务器的地址（如果是发布到flutter pub则不用填写，插件默认是上传到flutter pub）

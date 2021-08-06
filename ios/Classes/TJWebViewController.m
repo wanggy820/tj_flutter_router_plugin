@@ -35,7 +35,7 @@
     
     self.backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"bundle"];
+    NSString *path = [[NSBundle bundleForClass:self.class] pathForResource:@"Images" ofType:@"bundle"];
     [self.backButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@/back_icon", path]] forState:UIControlStateNormal];
     [self.backButton setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 10)];
     self.backButton.tintColor = [UIColor grayColor];

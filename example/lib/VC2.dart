@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   IconButton(
                     padding: EdgeInsets.only(right: 60),
-                    icon: Image(height:44,width: 44,image: AssetImage('lib/images/back_icon.png')),
+                    icon: Image(height:44,width: 44,image: AssetImage('images/back_icon.png')),
                     color: Colors.black,
                     highlightColor: Colors.transparent,
                     onPressed: () {
