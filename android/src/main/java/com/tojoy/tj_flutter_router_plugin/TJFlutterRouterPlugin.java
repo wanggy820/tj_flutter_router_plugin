@@ -2,10 +2,8 @@ package com.tojoy.tj_flutter_router_plugin;
 
 import android.text.TextUtils;
 import android.util.Log;
-
 import java.util.HashMap;
 import java.util.Map;
-
 import androidx.annotation.NonNull;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;

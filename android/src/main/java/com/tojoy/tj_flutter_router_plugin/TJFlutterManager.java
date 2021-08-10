@@ -1,7 +1,6 @@
 package com.tojoy.tj_flutter_router_plugin;
 
 import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

@@ -3,9 +3,7 @@ package com.tojoy.tj_flutter_router_plugin;
 
 import android.os.Bundle;
 import android.util.Log;
-
 import com.tojoy.router.AutoWired;
-
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity;
 

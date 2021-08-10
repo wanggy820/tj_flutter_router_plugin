@@ -15,15 +15,12 @@ import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import com.tojoy.router.AutoWired;
-import com.tojoy.router.Router;
-
 import androidx.annotation.Nullable;
 import static android.view.KeyEvent.KEYCODE_BACK;
 
 public class TJWebViewActivity extends Activity {
-    private ImageButton gobackBtn;
+//    private ImageButton gobackBtn;
     private ImageButton closeBtn;
     private TextView titleView;
     private ProgressBar progressBar;
@@ -40,7 +37,7 @@ public class TJWebViewActivity extends Activity {
 
         setContentView(R.layout.tj_web_view_layout);
 
-        gobackBtn = (ImageButton)findViewById(R.id.gobackBtn);
+//        gobackBtn = (ImageButton)findViewById(R.id.gobackBtn);
         closeBtn = (ImageButton)findViewById(R.id.closeBtn);
         titleView = (TextView)findViewById(R.id.titleView);
         progressBar = (ProgressBar)findViewById(R.id.progressBar);

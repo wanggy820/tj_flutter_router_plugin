@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   HBDNavigationBar: 6ba38b99637039c831ce460364d5398f29fa0685
-  tj_flutter_router_plugin: 112e9bfb2d0024577bf2ce5446357b6a3ed8cae5
+  tj_flutter_router_plugin: f17e5b92dc382cb2683bccabd4df95236f6c21b3
 
 PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
 
