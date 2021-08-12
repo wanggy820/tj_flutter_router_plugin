@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aabb20b-2e50-43e2-bc7b-81ceec5da5bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/values/styles.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJWebViewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/tojoy/tj_flutter_router_plugin/TJWebViewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/Router/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/Router/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/Router/src/main/java/com/tojoy/router/AutoWired.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/Router/src/main/java/com/tojoy/router/Router.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/Router/src/main/java/com/tojoy/router/_TJRouter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/RouterBindProcessor/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/RouterBindProcessor/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/RouterBindProcessor/src/main/java/com/tojoy/router/RouterBindProcessor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tj_flutter_router_plugin.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/tj_flutter_router_plugin.podspec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,30 +51,30 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="394" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1627888309951" />
-    <state width="1398" height="264" key="GridCell.Tab.0.bottom" timestamp="1628566687460">
+    <state width="1398" height="264" key="GridCell.Tab.0.bottom" timestamp="1628736472602">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="264" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1628566687460" />
+    <state width="1398" height="264" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1628736472602" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1628221040968" />
-    <state width="1398" height="264" key="GridCell.Tab.0.center" timestamp="1628566687459">
+    <state width="1398" height="264" key="GridCell.Tab.0.center" timestamp="1628736472601">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="264" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1628566687459" />
+    <state width="1398" height="264" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1628736472601" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1628221040968" />
-    <state width="1398" height="264" key="GridCell.Tab.0.left" timestamp="1628566687458">
+    <state width="1398" height="264" key="GridCell.Tab.0.left" timestamp="1628736472601">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="264" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1628566687458" />
+    <state width="1398" height="264" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1628736472601" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1628221040968" />
-    <state width="1398" height="264" key="GridCell.Tab.0.right" timestamp="1628566687459">
+    <state width="1398" height="264" key="GridCell.Tab.0.right" timestamp="1628736472601">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="264" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1628566687459" />
+    <state width="1398" height="264" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1628736472601" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1628221040968" />
-    <state x="412" y="205" width="668" height="490" key="find.popup" timestamp="1627887175039">
+    <state x="412" y="205" width="668" height="490" key="find.popup" timestamp="1628730527687">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="412" y="205" width="668" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1627887175039" />
+    <state x="412" y="205" width="668" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1628730527687" />
     <state width="300" height="98" key="javadoc.popup.new" timestamp="1627875385847">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
